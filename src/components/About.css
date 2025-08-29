@@ -1,0 +1,131 @@
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.stat {
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.stat p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.about-image {
+  display: flex;
+  justify-content: center;
+}
+
+.image-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transform: rotate(-3deg);
+  transition: all 0.3s ease;
+}
+
+.image-card:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.code-snippet {
+  background: #1a1a2e;
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+}
+
+.code-header {
+  background: #2d2d44;
+  padding: 0.8rem 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dots span:nth-child(1) { background: #ff5f56; }
+.dots span:nth-child(2) { background: #ffbd2e; }
+.dots span:nth-child(3) { background: #27ca3f; }
+
+.code-content {
+  padding: 1rem;
+  color: #e6e6e6;
+}
+
+.code-line {
+  margin-bottom: 0.3rem;
+}
+
+.keyword {
+  color: #c792ea;
+}
+
+.string {
+  color: #c3e88d;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .image-card {
+    transform: none;
+  }
+
+  .code-snippet {
+    font-size: 0.8rem;
+  }
+}
